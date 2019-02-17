@@ -9,11 +9,21 @@ Home services  on Demand
 $set_uname=0;
 if(isset($_COOKIE["username"])) {
 	 $username=$_COOKIE["username"];
-	 $username="sid";
+
 	 $set_uname=1;
 } 
+else if(isset($msg))
+	{
+?>
+<script>
+alert("<?php echo $msg; ?>");
+</script>
+<?php 
+
+	}
 
 ?>
+
 
 <!DOCTYPE html>
 	<html class="no-js">
@@ -77,7 +87,7 @@ if(isset($_COOKIE["username"])) {
 				          	<ul>
 				          		<li><a href="#">My Services</a></li>
 				          		<li><a href="#">Account</a></li>
-				          		<li><a href="#">Log Out</a></li>
+				          		<li><a href="./do_logout.php">Log Out</a></li>
 				          	</ul>
 									</li>
 									<?php } ?>
@@ -228,7 +238,7 @@ if(isset($_COOKIE["username"])) {
 				</div>	
 			</section>
 			<!-- End home-about Area -->
-
+<?php if($set_uname == 0){ ?>
 			<!-- Start discount-section Area -->
 			<section class="discount-section-area relative section-gap">
 				<div class="overlay overlay-bg" id="Signin"></div>
@@ -381,7 +391,7 @@ if(isset($_COOKIE["username"])) {
 </div>
 							</div>
 						<div class="col-lg-5 discount-right"  id="login">
-							<form class="box" action="check_login.php" method="POST" target="_self">
+							<form name="form_login" class="box" action="check_login.php" method="POST" target="_self">
 							  <h1>login</h1>
 							  <input type="text" name="username" id="username" placeholder="Username" autocomplete="off">
 							  <input type="password" name="pass" id="pass" placeholder="Password" autocomplete="off">
@@ -392,7 +402,7 @@ if(isset($_COOKIE["username"])) {
 				</div>	
 			</section>
 			<!-- End discount-section Area -->
-			
+<?php }?>
 			<!-- Start work-process Area -->
 			<section class="work-process-area pt-120">
 				<div class="container">
