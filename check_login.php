@@ -10,8 +10,8 @@ else
         include 'connect.php';
         $username = $_POST['username'];
         $pass = $_POST['pass'];
-        
-        if(!$resultset = $database_handler->query("SELECT * FROM user WHERE username ='". $username. "';"))
+        $type="admin";
+        if(!$resultset = $database_handler->query("SELECT * FROM user WHERE username =	;"))
              die("Query error");
        
              $row = $resultset->fetch_assoc();
@@ -26,7 +26,11 @@ else
                  if($pass==$row['password'])
                  {
                     setcookie("username",$username); 
-                    
+                    if($row['type']==$type)
+					{
+						header("location: ./admin.php");
+						exit;
+					}
                  }
                  else
                  {
