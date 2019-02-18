@@ -5,24 +5,7 @@ Home services  on Demand
 
 -->	
 
-<?php
-$set_uname=0;
-if(isset($_COOKIE["username"])) {
-	 $username=$_COOKIE["username"];
 
-	 $set_uname=1;
-} 
-else if(isset($msg))
-	{
-?>
-<script>
-alert("<?php echo $msg; ?>");
-</script>
-<?php 
-
-	}
-
-?>
 <?php  include "header.php"; ?>
 
 			<!-- start banner Area -->
@@ -51,7 +34,7 @@ alert("<?php echo $msg; ?>");
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-md-12 pb-50 header-text text-center">
-							<h1 class="mb-10">What we Offer to our Supporters</h1>
+							<h1  id="gray" class="mb-10">What we Offer to our Supporters</h1>
 							<p>
 								Who are in extremely love with eco friendly system..
 							</p>
@@ -193,7 +176,7 @@ alert("<?php echo $msg; ?>");
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="modal_body">
         <form>
 		  <div class="form-group">
 		    <label for="inputAddress">Full Name</label>
@@ -253,6 +236,8 @@ alert("<?php echo $msg; ?>");
     </div>
   </div>
 </div>
+
+
 				
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
  Sign Up
@@ -329,6 +314,11 @@ alert("<?php echo $msg; ?>");
 					</div>
 				</div>	
 			</section>
+			
+<script>
+	document.getElementById("demo").innerHTML = "Paragraph changed!";
+	</script>
+
 			<!-- End discount-section Area -->
 <?php }?>
 			<!-- Start work-process Area -->
@@ -337,7 +327,7 @@ alert("<?php echo $msg; ?>");
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-7">
 							<div class="title text-center">
-								<h1 class="mb-10">Our Working Process</h1>
+								<h1 id="gray" class="mb-10">Our Working Process</h1>
 								<p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game</p>
 							</div>
 						</div>

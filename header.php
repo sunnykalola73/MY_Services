@@ -1,4 +1,21 @@
+<?php
+$set_uname=0;
+if(isset($_COOKIE["username"])) {
+	 $username=$_COOKIE["username"];
 
+	 $set_uname=1;
+} 
+else if(isset($msg))
+	{
+?>
+<script>
+alert("<?php echo $msg; ?>");
+</script>
+<?php 
+
+	}
+
+?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -32,23 +49,37 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>	
+
           <header id="header" id="home" style="height:19%;width:auto;">
           
             <div class="container main-menu">
                 <div class="row align-items-center justify-content-between d-flex">
                   <div id="logo">
-                    <a href="index.html"><img src="img/nlogo.png" alt="Logo Here" title="" /></a>
+                    <a href="index.php"><img src="img/nlogo.png" alt="Logo Here" title="" /></a>
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
+<<<<<<< HEAD
                       <li class="menu-active"><a href="index.php">Home</a></li>
+=======
+
+                      <li class="active"><a href="index.php">Home</a></li>
+>>>>>>> 976a7f1e56f7ab6c29eeb48381233de5bb9db3fb
                       <li><a href="about.html">About</a></li>
-                      <li><a  class="menu-has-children" href="services.html">Services</a>
+
+                      <li class="menu-active"><a href="index.php">Home</a></li>
+                     
+
+                      <li><a  class="menu-has-children" href="services.php">Services</a>
+
+
                        
                       </li>
-                      <li><a href="feedback.html">Feedback</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                      <li><a href="contact.php">Contact</a></li>
+                      <li><a href="feedback.php">Feedback</a></li>
+                               
                                 <?php if($set_uname==0){ ?>
+                                  <li><a href="about.php">About</a></li>
                       <li><a href="#login">LogIn</a><li>
                                 <?php }else{ ?>
                       <li><a href="#"><b><?php echo $username; ?></b></a>
