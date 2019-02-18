@@ -22,6 +22,7 @@ else
                  if($pass==$row['password'])
                  {
                     setcookie("username",$username); 
+                    setcookie("uid",$row['id']); 
                     
                  }
                  else

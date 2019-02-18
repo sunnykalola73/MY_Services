@@ -14,15 +14,16 @@ else
 ?>
 <div class="request">
 	
-      <form action="appointment.php" method="post">
+      <form action="appointment.php" method="POST">
+		  <input type="hidden" value="1" name="new_apt"/>
 				<div class="form-group col-lg-5 col-ms-5">
 					<label>Description</label><br>
-					<textarea rows="6" cols="50" class="form-control" name="desc" placeholder="Enter Description For Your Service Request"></textarea><br>
+					<textarea rows="6" cols="50" class="form-control" name="desc" placeholder="Enter Description For Your Service Request" required></textarea><br>
 				</div>
 				
 				<div class="form-group col-ms-4 col-lg-6">
 					<label>Feasible Date</label><br>
-					<input type="date" name="date" class="form-control"><br>
+					<input type="date" name="date" class="form-control" required><br>
 				</div>
 				<div class="form-group col-ms-5 col-lg-5">
 					<label>Select Address</label><br>
