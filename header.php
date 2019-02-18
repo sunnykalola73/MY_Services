@@ -41,18 +41,18 @@
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
-<<<<<<< HEAD
+
                       <li class="active"><a href="index.php">Home</a></li>
                       <li><a href="about.html">About</a></li>
-=======
+
                       <li class="menu-active"><a href="index.php">Home</a></li>
                      
-<<<<<<< HEAD
+
                       <li><a  class="menu-has-children" href="services.php">Services</a>
-=======
->>>>>>> 97d988fd7cc530ad44472be173652f4b39fdc0dc
+
+
                       <li><a  class="menu-has-children" href="services.php">Services</a>
->>>>>>> 50a0a727cc539abe5cbd777f9d3627ee4eece8be
+
                        
                       </li>
                       <li><a href="contact.php">Contact</a></li>
