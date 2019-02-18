@@ -6,7 +6,17 @@ Home services  on Demand
 -->	
 <?php $page="home"; ?>
 
-<?php  include "header.php"; ?>
+<?php  include "header.php";
+if(isset($_GET['msg']))
+	{
+		if($_GET['msg']!=""){
+		?>
+		<script>
+			alert("<?php echo $_GET['msg']; ?>");
+			</script>
+		<?php
+	}}
+?>
 
 			<!-- start banner Area -->
 			<section class="banner-area" id="home">

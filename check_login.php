@@ -1,6 +1,3 @@
-<script>
-    alert("gg");
-    </script>
 <?php
 
 if (!isset($_POST['username']))
@@ -10,15 +7,14 @@ else
         include 'connect.php';
         $username = $_POST['username'];
         $pass = $_POST['pass'];
-        $type="admin";
-        if(!$resultset = $database_handler->query("SELECT * FROM user WHERE username =	;"))
+        
+        if(!$resultset = $database_handler->query("SELECT * FROM user WHERE username ='". $username. "';"))
              die("Query error");
        
              $row = $resultset->fetch_assoc();
-           //  print("ff");
-          //   print($username);
+          
              if($row['block_status']==1)
-             {$msg="Sorry You are blocked by admin"; echo "hh";}
+             {$msg="Sorry You are blocked by admin"; }
              else
              {
              if($username==$row['username'])
@@ -26,11 +22,7 @@ else
                  if($pass==$row['password'])
                  {
                     setcookie("username",$username); 
-                    if($row['type']==$type)
-					{
-						header("location: ./admin.php");
-						exit;
-					}
+                    
                  }
                  else
                  {
@@ -42,7 +34,7 @@ else
                 $msg="Wrong Username";
             }
         }
-            header("location: ./index.php");        
+           header('location: index.php?msg='.$msg.'');
            
     }
 ?>

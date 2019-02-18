@@ -1,4 +1,4 @@
-<?php  include "header.php"; ?>
+<?php $page="feedback"; include "header.php"; ?>
 <!-- start banner Area -->
 			<section class="banner-area relative" id="home">	
 				<div class="overlay overlay-bg"></div>
@@ -15,7 +15,8 @@
 			</section>
 			<!-- End banner Area -->	
 
-<?php $page="feedback"; include "header.php"; ?>
+
+
 			<!-- Start feedback-area Area -->
 			<section class="feedback-area-area pt-120">
 				<div class="container">
