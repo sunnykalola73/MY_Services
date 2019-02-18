@@ -19,14 +19,7 @@
 									<table>
 										<tr>
 											<td width="70px"><li><a href="#" style="color:white;">Home</a></li></td>
-											<td width="100px"><li><a href="#" style="color:white;">Feature</a></li></td>
 											<td width="100px"><li><a href="#" style="color:white;">Services</a></li></td>
-											<td><li><a href="#" style="color:white;">Portfolio</a></li></td>
-										</tr>
-										<tr>
-											<td><li><a href="#" style="color:white;">Team</a></li></td>
-											<td><li><a href="#" style="color:white;">Pricing</a></li></td>
-											<td><li><a href="#" style="color:white;">Blog</a></li></td>
 											<td><li><a href="#" style="color:white;">Contact</a></li></td>
 									</table>
 							</div>							

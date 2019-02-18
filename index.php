@@ -338,7 +338,7 @@ alert("<?php echo $msg; ?>");
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-7">
 							<div class="title text-center">
-								<h1 id="gray" class="mb-10">Our Working Process</h1>
+								<h1 id="gray	" class="mb-10">Our Working Process</h1>
 								<p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game</p>
 							</div>
 						</div>
