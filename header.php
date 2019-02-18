@@ -65,7 +65,7 @@ alert("<?php echo $msg; ?>");
 
                       <li><a href="about.html">About</a></li>
 
-                      <li class="menu-active"><a href="index.php">Home</a></li>
+                      
                      
 
                       <li><a  class="menu-has-children" href="services.php">Services</a>

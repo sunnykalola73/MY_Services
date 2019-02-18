@@ -221,18 +221,17 @@ Home services  on Demand
 		        <option selected>Choose...</option>
 		        <option>...</option>
 		      </select>
-		    </div>
+				</div>
+				
 		  </div>
-		  <div class="form-group">
-		    <label for="inputAddress2">Enter OTP Code</label>
-		    <input type="text" class="form-control" id="inputAddress2" placeholder="Enter OTP Code">
-		  </div>
-		</form>
+			
+		
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
+        <button type="button" onclick="enterotp()" class="btn btn-primary">Submit</button>
+			</div>
+</form>
     </div>
   </div>
 </div>
@@ -243,6 +242,18 @@ Home services  on Demand
  Sign Up
 </button>
 
+
+<script>
+	function enterotp()
+	{
+		alert("h");
+	document.getElementById("modal_body").innerHTML = '	<div class="form-group">
+    <label for="inputAddress2">Enter OTP</label>
+    <input type="text" class="form-control" id="otp" placeholder="OTP">
+  </div>';
+	
+	}
+	</script>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -253,7 +264,7 @@ Home services  on Demand
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="modal_body"> 
         <form>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -290,19 +301,26 @@ Home services  on Demand
       <input type="text" class="form-control" id="inputZip">
     </div>
   </div>
- 
+	<div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+	</div>
+
 </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+       
       </div>
     </div>
   </div>
 </div>
  
 </div>
-							</div>
+					
+
+
+</div>
 						<div class="col-lg-5 discount-right"  id="login">
 							<form name="form_login" class="box" action="check_login.php" method="POST" target="_self">
 							  <h1>login</h1>
@@ -315,9 +333,7 @@ Home services  on Demand
 				</div>	
 			</section>
 			
-<script>
-	document.getElementById("demo").innerHTML = "Paragraph changed!";
-	</script>
+
 
 			<!-- End discount-section Area -->
 <?php }?>
