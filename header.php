@@ -41,14 +41,21 @@
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
+<<<<<<< HEAD
                       <li class="active"><a href="index.php">Home</a></li>
                       <li><a href="about.html">About</a></li>
+=======
+                      <li class="menu-active"><a href="index.php">Home</a></li>
+                     
+>>>>>>> 97d988fd7cc530ad44472be173652f4b39fdc0dc
                       <li><a  class="menu-has-children" href="services.html">Services</a>
                        
                       </li>
+                      <li><a href="contact.html">Contact</a></li>
                       <li><a href="feedback.html">Feedback</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                               
                                 <?php if($set_uname==0){ ?>
+                                  <li><a href="about.html">About</a></li>
                       <li><a href="#login">LogIn</a><li>
                                 <?php }else{ ?>
                       <li><a href="#"><b><?php echo $username; ?></b></a>
