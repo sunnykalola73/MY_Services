@@ -1,4 +1,21 @@
+<?php
+$set_uname=0;
+if(isset($_COOKIE["username"])) {
+	 $username=$_COOKIE["username"];
 
+	 $set_uname=1;
+} 
+else if(isset($msg))
+	{
+?>
+<script>
+alert("<?php echo $msg; ?>");
+</script>
+<?php 
+
+	}
+
+?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -32,6 +49,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>	
+
           <header id="header" id="home" style="height:19%;width:auto;">
           
             <div class="container main-menu">

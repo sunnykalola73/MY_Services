@@ -193,7 +193,7 @@ alert("<?php echo $msg; ?>");
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="modal_body">
         <form>
 		  <div class="form-group">
 		    <label for="inputAddress">Full Name</label>
@@ -254,6 +254,12 @@ alert("<?php echo $msg; ?>");
     </div>
   </div>
 </div>
+
+
+<script>
+	$('#content-container').html(linkText);
+	</script>
+
 				
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
  Sign Up
