@@ -4,8 +4,8 @@ created by Sunny Kalola
 Home services  on Demand
 
 -->	
-<?php $page="home"; ?>
 
+<<<<<<< HEAD
 <?php  include "header.php";
 if(isset($_GET['msg']))
 	{
@@ -17,6 +17,27 @@ if(isset($_GET['msg']))
 		<?php
 	}}
 ?>
+=======
+<?php
+$set_uname=0;
+if(isset($_COOKIE["username"])) {
+	 $username=$_COOKIE["username"];
+
+	 $set_uname=1;
+} 
+else if(isset($msg))
+	{
+?>
+<script>
+alert("<?php echo $msg; ?>");
+</script>
+<?php 
+
+	}
+
+?>
+<?php  include "header.php"; ?>
+>>>>>>> 1c2d278c7d9a28422b468240538cd722204c7ca8
 
 			<!-- start banner Area -->
 			<section class="banner-area" id="home">
@@ -44,7 +65,7 @@ if(isset($_GET['msg']))
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-md-12 pb-50 header-text text-center">
-							<h1  id="gray" class="mb-10">What we Offer to our Supporters</h1>
+							<h1 class="mb-10">What we Offer to our Supporters</h1>
 							<p>
 								Who are in extremely love with eco friendly system..
 							</p>
@@ -175,27 +196,7 @@ if(isset($_GET['msg']))
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
  Sign Up As Dealer
 </button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
- Sign Up
-</button>
 
-
-<script>
-	function enterotp()
-	{
-	
-	document.getElementById("modal_body").innerHTML = '<div class="form-group"><label for="inputAddress2">Enter OTP</label><input type="text" class="form-control" id="otp" placeholder="OTP"> </div>';	
-	document.getElementById("modal_footer").innerHTML = '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="button" onclick="verifyotp()" class="btn btn-primary">Submit1</button>';
-	}
-	function verifyotp()
-	{
-		var eotp=document.getElementById("modal_body").value;
-		if(eotp==otp)
-			alert("successfully created");
-		else
-			alert("wrong login");
-	}
-	</script>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -206,7 +207,82 @@ if(isset($_GET['msg']))
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" id="modal_body"> 
+      <div class="modal-body">
+        <form>
+		  <div class="form-group">
+		    <label for="inputAddress">Full Name</label>
+		    <input type="text" class="form-control" id="name" placeholder="Enter Full Name">
+		  </div>
+		  <div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label for="inputEmail4">Email</label>
+		      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label for="inputPassword4">Choose Password</label>
+		      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+		    </div>
+		  </div>
+		  <div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label for="inputEmail4">Username</label>
+		      <input type="text" class="form-control" id="inputEmail4" placeholder="Username">
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label for="inputPassword4">Mobile No.(+91)</label>
+		      <input type="number" class="form-control" id="inputPassword4" placeholder="Mobile No." maxlength="10" required>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputAddress">House/Street</label>
+		    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+		  </div>
+		  <div class="form-group">
+		    <label for="inputAddress2">Area</label>
+		    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+		  </div>
+		  <div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label for="inputCity">City</label>
+		      <input type="text" class="form-control" id="inputCity">
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label for="inputState">State</label>
+		      <select id="inputState" class="form-control">
+		        <option selected>Choose...</option>
+		        <option>...</option>
+		      </select>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputAddress2">Enter OTP Code</label>
+		    <input type="text" class="form-control" id="inputAddress2" placeholder="Enter OTP Code">
+		  </div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+				
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+ Sign Up
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Get Yourself Registered</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
         <form>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -243,26 +319,19 @@ if(isset($_GET['msg']))
       <input type="text" class="form-control" id="inputZip">
     </div>
   </div>
-	<div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-	</div>
-
+ 
 </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
  
 </div>
-					
-
-
-</div>
+							</div>
 						<div class="col-lg-5 discount-right"  id="login">
 							<form name="form_login" class="box" action="check_login.php" method="POST" target="_self">
 							  <h1>login</h1>
@@ -274,9 +343,6 @@ if(isset($_GET['msg']))
 					</div>
 				</div>	
 			</section>
-			
-
-
 			<!-- End discount-section Area -->
 <?php }?>
 			<!-- Start work-process Area -->
@@ -285,7 +351,7 @@ if(isset($_GET['msg']))
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-7">
 							<div class="title text-center">
-								<h1 id="gray" class="mb-10">Our Working Process</h1>
+								<h1 class="mb-10">Our Working Process</h1>
 								<p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game</p>
 							</div>
 						</div>
@@ -354,7 +420,7 @@ if(isset($_GET['msg']))
 		                                </div>
 		                            </div>
 		                            <div class="accordion-content">
-		                                <p>We provide  variety of services, ranging from refrigerators to geysers. However, do note that the availability of our services vary from city to city. Hence, we request you to go through the rate card prior to booking a service and skip those services not mentioned on the city specific rate card.</p>
+		                                <p>We provide  variety of services, ranging from installation to maintainance for appliances like refrigerators, geysers, washing machines, etc. However, do note that the availability of our services vary from city to city. Hence, we request you to go through the availability of your own city for more clear idea.</p>
 		                            </div>
 		                        </div>
 		                        <!--Accordion item-->
@@ -362,13 +428,13 @@ if(isset($_GET['msg']))
 		                        <!--Accordion item-->
 		                        <div class="accordion-item">
 		                            <div class="accordion-heading">
-		                                <h3>Info</h3>
+		                                <h3>In what duration of time do you provide services?</h3>
 		                                <div class="icon">
 		                                    <i class="lnr lnr-chevron-right"></i>
 		                                </div>
 		                            </div>
 		                            <div class="accordion-content">
-		                                <p>For many of us, our very first experience of learning about the celestial bodies begins when we saw our first full moon in the sky. It is truly a magnificent view even to the naked eye. If the night is clear, you can see amazing detail of the lunar surface just star gazing on in your back yard.</p>
+		                                <p>It depends on type of service and availability of service provider but we try to provide it in 24 hours.</p>
 		                            </div>
 		                        </div>
 		                        <!--Accordion item-->
@@ -376,26 +442,26 @@ if(isset($_GET['msg']))
 		                        <!--Accordion item-->
 		                        <div class="accordion-item">
 		                            <div class="accordion-heading">
-		                                <h3>danger</h3>
+		                                <h3>Do you offer warranty on your work?</h3>
 		                                <div class="icon">
 		                                    <i class="lnr lnr-chevron-right"></i>
 		                                </div>
 		                            </div>
 		                            <div class="accordion-content">
-		                                <p>For many of us, our very first experience of learning about the celestial bodies begins when we saw our first full moon in the sky. It is truly a magnificent view even to the naked eye. If the night is clear, you can see amazing detail of the lunar surface just star gazing on in your back yard.</p>
+		                                <p>We offer 7 days warranty on the work done. We would do the rework free of cost(excluding if any material is needed).</p>
 		                            </div>
 		                        </div>
 		                        <!--Accordion item-->
 		                        <!--Accordion item-->
 		                        <div class="accordion-item">
 		                            <div class="accordion-heading">
-		                                <h3>Warning</h3>
+		                                <h3>How can I view all my orders?</h3>
 		                                <div class="icon">
 		                                    <i class="lnr lnr-chevron-right"></i>
 		                                </div>
 		                            </div>
 		                            <div class="accordion-content">
-		                                <p>For many of us, our very first experience of learning about the celestial bodies begins when we saw our first full moon in the sky. It is truly a m*agnificent view even to the naked eye. If the night is clear, you can see amazing detail of the lunar surface just star gazing on in your back yard.</p>
+		                                <p>Go to My appointment page. Details of all your order will be displayed there.</p>
 		                            </div>
 		                        </div>
 		                        <!--Accordion item-->
