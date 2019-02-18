@@ -5,24 +5,7 @@ Home services  on Demand
 
 -->	
 
-<?php
-$set_uname=0;
-if(isset($_COOKIE["username"])) {
-	 $username=$_COOKIE["username"];
 
-	 $set_uname=1;
-} 
-else if(isset($msg))
-	{
-?>
-<script>
-alert("<?php echo $msg; ?>");
-</script>
-<?php 
-
-	}
-
-?>
 <?php  include "header.php"; ?>
 
 			<!-- start banner Area -->
@@ -193,7 +176,7 @@ alert("<?php echo $msg; ?>");
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="modal_body">
         <form>
 		  <div class="form-group">
 		    <label for="inputAddress">Full Name</label>
@@ -253,6 +236,12 @@ alert("<?php echo $msg; ?>");
     </div>
   </div>
 </div>
+
+
+<script>
+	$('#content-container').html(linkText);
+	</script>
+
 				
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
  Sign Up
