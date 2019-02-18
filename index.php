@@ -51,7 +51,7 @@ alert("<?php echo $msg; ?>");
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-md-12 pb-50 header-text text-center">
-							<h1 class="mb-10">What we Offer to our Supporters</h1>
+							<h1  id="gray" class="mb-10">What we Offer to our Supporters</h1>
 							<p>
 								Who are in extremely love with eco friendly system..
 							</p>
@@ -337,7 +337,7 @@ alert("<?php echo $msg; ?>");
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-7">
 							<div class="title text-center">
-								<h1 class="mb-10">Our Working Process</h1>
+								<h1 id="gray" class="mb-10">Our Working Process</h1>
 								<p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game</p>
 							</div>
 						</div>

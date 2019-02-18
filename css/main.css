@@ -2828,10 +2828,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
 }
 h1{
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 5px;
+}
+#gray{
+    font-size: 36px;
+    background: -webkit-linear-gradient(#7417ed,#9426a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /************** 
  Input Fields
