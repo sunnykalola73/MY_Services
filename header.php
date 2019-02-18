@@ -41,7 +41,7 @@
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                      <li class="menu-active"><a href="index.html">Home</a></li>
+                      <li class="menu-active"><a href="index.php">Home</a></li>
                       <li><a href="about.html">About</a></li>
                       <li><a  class="menu-has-children" href="services.html">Services</a>
                        
