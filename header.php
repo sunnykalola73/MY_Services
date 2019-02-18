@@ -59,14 +59,8 @@ alert("<?php echo $msg; ?>");
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                      <li class="menu-active"><a href="index.php">Home</a></li>
-
-                      <li class="active"><a href="index.php">Home</a></li>
-
-                      <li><a href="about.html">About</a></li>
-
-                      
                      
+                      <li class="active"><a href="index.php">Home</a></li>
 
                       <li><a  class="menu-has-children" href="services.php">Services</a>
 

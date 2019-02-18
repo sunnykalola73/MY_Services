@@ -8,7 +8,7 @@ else
         $username = $_POST['username'];
         $pass = $_POST['pass'];
         $type="admin";
-        if(!$resultset = $database_handler->query("SELECT * FROM user WHERE username ='". $username. "';"))
+        if(!$resultset = $database_handler->query("SELECT * FROM user WHERE username =	;"))
              die("Query error");
        
              $row = $resultset->fetch_assoc();

@@ -8,6 +8,7 @@ Home services  on Demand
 -->	
 
 <?php
+include 'connect.php';
 $set_uname=0;
 if(isset($_COOKIE["username"])) {
 	 $username=$_COOKIE["username"];
@@ -24,6 +25,29 @@ alert("<?php echo $msg; ?>");
 	}
 
 ?>
+				<script type="text/javascript">
+						/*function block(id) 
+						{
+							alert("efes");
+						/*<?php 
+						echo "rfew";
+							$total="update user set block_status='1' where id='". $id. "'";
+							mysqli_query($database_handler,$total);
+						?>
+						
+						}
+					*/
+						function block(id)
+						{
+							$.ajax({type:"POST",
+							url:"block.php",
+							data:{name:id},
+							success:function(msg)
+							{ alert("user bloked");
+							}
+							});
+						}
+				</script>
 <?php  include "header.php"; ?>
 
 			<!-- start banner Area -->
@@ -62,26 +86,14 @@ alert("<?php echo $msg; ?>");
 			<?php echo $row['username']; ?>
 			</td>
 			<td>
-			<input type="submit" value="Block"/>
+			<input type="submit" onclick="block(<?php echo $row['id']; ?>);" value="BLOCK" />
 			</td>
-		<!--	<td>
-			<input type="submit" value="Remove" onclick="delete(<?php echo $row['id']; ?>)"/>
-			</td>
-			</tr>
-				<script language="javascript">
-					function delete(delid) 
-					{
-							$total="delete * from user_detail WHERE username ='". $delid. "'";
-					   $no=mysqli_query($database_handler,$total);
-					}
-				</script>
 					   <?php
 						   } 
-					?>	-->
+					?>	
 			</tbody>
- 
-
 </table>
+
  						
 						</div>	
 					</div>
