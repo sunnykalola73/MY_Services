@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2019 at 01:31 PM
+-- Generation Time: Feb 18, 2019 at 04:09 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -47,22 +47,30 @@ CREATE TABLE `city` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `fid` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `sid` int(11) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `description` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `service`
 --
 
 CREATE TABLE `service` (
-  `id` int(11) NOT NULL,
+  `sid` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `type` varchar(50) DEFAULT NULL
+  `type` varchar(50) DEFAULT NULL,
+  `description` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `service`
---
-
-INSERT INTO `service` (`id`, `name`, `username`, `type`) VALUES
-(1, 'sunny', 'sunny', 'cleaning');
 
 -- --------------------------------------------------------
 
@@ -137,10 +145,16 @@ ALTER TABLE `city`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`fid`);
+
+--
 -- Indexes for table `service`
 --
 ALTER TABLE `service`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`sid`);
 
 --
 -- Indexes for table `state`
@@ -175,10 +189,15 @@ ALTER TABLE `area`
 ALTER TABLE `city`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `state`
 --
