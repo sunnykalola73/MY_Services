@@ -59,12 +59,16 @@ alert("<?php echo $msg; ?>");
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
+<<<<<<< HEAD
+=======
                       
                       <li <?php if(isset($page) && $page=="home") echo 'class="active"'; ?>><a href="index.php">Home</a></li>
                       <li <?php if(isset($page) && $page=="about") echo 'class="active"'; ?> ><a href="about.php">About</a></li>
 
                       
+>>>>>>> bdcd6c527b66e51d5c919e2cca88cafe0156c317
                      
+                      <li class="active"><a href="index.php">Home</a></li>
 
                       <li <?php if(isset($page) && $page=="services") echo 'class="active"'; ?>><a  class="menu-has-children" href="services1.php">Services</a>
 
