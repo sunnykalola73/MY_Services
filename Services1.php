@@ -1,8 +1,13 @@
 
 <?php $page="services"; ?>
-<?php include "header.php"; ?>
+<?php include "header.php"; include "connect.php"; 
 	
-
+if(!$resultset = $database_handler->query("SELECT * FROM service ;"))
+             die("Query error");
+			 
+             
+       
+?>
 <!-- start banner Area -->
 <section class="banner-area relative" id="home">	
 				<div class="overlay overlay-bg"></div>
@@ -27,28 +32,17 @@
 	<col width="200">
 	<col width="500">
 	<col width="100">
-		<tr>
-			<td><img class="xyz" src="img/water-heater-repairing.jpg" alt=""></td>
+	<?php while($row = $resultset->fetch_assoc()) { ?>
+	<tr><form action="request.php">
+			<td><img class="xyz"  height="90%" style="margin-left:0"  src="<?php echo $row['image']; ?>" alt=""></td>
 			<td>
-				<h3 align="center">Water Heater Services</h3><br><p class="abc">Whether you need a water heater installation for a new home, need to upgrade your current system, or need a complete water heater replacement our plumbers can help.</p></td>
-			<td><button type="button">REQUEST</button></td>
-	</tr>
-	<br>
+				<h3 align="center"> <?php echo $row['sname']; ?> </h3><br><p class="abc"> <?php echo $row['description']; ?> </p></td>
+			<td><input type="submit" value="Request" /></td>
+	</form>
+	</tr><br>
+	<?php } ?>
 	
-		<tr>
-			<td><img class="xyz" src="img/Garbage-Disposal-Repair.jpg" alt=""></td>
-			<td>
-				<h3 align="center">Garbage Disposal Repair</h3><br><p class="abc">The sewage pipe needs to be clean. Our sewage line repair and replacement services will not only identify the problem but take preventative measures to ensure it won't return.</p></td>
-			<td><button type="button">REQUEST</button></td>
-	</tr>
-	<br>
-	<tr>
-			<td><img class="xyz" src="img/Gas-Line-Repair-Services-in-Siloam-Springs-Arkansas.jpg" alt=""></td>
-			<td>
-				<h3 align="center">Gas Line Valve Services</h3><br><p class="abc">Our gas valve services include all services from removal,repair to re-installation. We also offer services like pressure and leakage testing for assurance of safety.</p></td>
-			<td><button type="button">REQUEST</button></td>
-	</tr>
-	<br>
+		
 
 </table>
 
