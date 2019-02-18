@@ -239,7 +239,8 @@ alert("<?php echo $msg; ?>");
 		        <option>...</option>
 		      </select>
 		    </div>
-		  </div>
+			</div>
+				 
 		  <div class="form-group">
 		    <label for="inputAddress2">Enter OTP Code</label>
 		    <input type="text" class="form-control" id="inputAddress2" placeholder="Enter OTP Code">
