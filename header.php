@@ -59,20 +59,28 @@ alert("<?php echo $msg; ?>");
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
+<<<<<<< HEAD
+=======
+                      
+                      <li <?php if(isset($page) && $page=="home") echo 'class="active"'; ?>><a href="index.php">Home</a></li>
+                      <li <?php if(isset($page) && $page=="about") echo 'class="active"'; ?> ><a href="about.php">About</a></li>
+
+                      
+>>>>>>> bdcd6c527b66e51d5c919e2cca88cafe0156c317
                      
                       <li class="active"><a href="index.php">Home</a></li>
 
-                      <li><a  class="menu-has-children" href="services.php">Services</a>
+                      <li <?php if(isset($page) && $page=="services") echo 'class="active"'; ?>><a  class="menu-has-children" href="services1.php">Services</a>
 
 
                        
                       </li>
-                      <li><a href="contact.php">Contact</a></li>
-                      <li><a href="feedback.php">Feedback</a></li>
+                      <li <?php if(isset($page) && $page=="contact") echo 'class="active"'; ?>><a href="contact.php">Contact</a></li>
+                      <li <?php if(isset($page) && $page=="feedback") echo 'class="active"'; ?>><a href="feedback.php">Feedback</a></li>
                                
                                 <?php if($set_uname==0){ ?>
-                                  <li><a href="about.php">About</a></li>
-                      <li><a href="#login">LogIn</a><li>
+                                  
+                      <li><a href="index.php#login">LogIn</a><li>
                                 <?php }else{ ?>
                       <li><a href="#"><b><?php echo $username; ?></b></a>
                           <ul>
