@@ -229,7 +229,7 @@ Home services  on Demand
       </div>
       <div class="modal-footer" id="modal_footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" onclick="enterotp()" class="btn btn-primary">Submit1</button>
+        <button type="button" onclick="enterotp()" class="btn btn-primary">Submit</button>
 			</div>
 </form>
     </div>
