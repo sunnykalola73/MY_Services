@@ -1,4 +1,4 @@
-<?php  include "header.php"; ?>
+*<?php  include "header.php"; ?>
 <!-- start banner Area -->
 			<section class="banner-area relative" id="home">	
 				<div class="overlay overlay-bg"></div>
@@ -21,7 +21,6 @@
 					<div class="row">
 						<div class="col-lg-4">
 							<div class="single-feedback">
-								<img src="img/t1.png" alt="">
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory.
 								</p>
