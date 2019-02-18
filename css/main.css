@@ -1369,13 +1369,15 @@ h1,h2,h3,h4,h5,h6 {
     transition: 0.3s}
 .nav-menu ul li a {
     padding: 10px;
+    text-decoration: underline;
     color: #333;
     transition: 0.3s;
     display: block;
     font-size: 12px;
     text-transform: none}
 .nav-menu ul li:hover>a {
-    color: #988fff}
+    
+    color: #988fff }
 .nav-menu ul ul {
     margin: 0}
 #mobile-nav-toggle {
@@ -2828,16 +2830,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
 }
 h1{
-  color: black;
+  color: white;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 5px;
-}
-#gray{
-    font-size: 36px;
-    background: -webkit-linear-gradient(#7417ed,#9426a0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 /************** 
  Input Fields
