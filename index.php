@@ -239,10 +239,6 @@ Home services  on Demand
 </div>
 
 
-<script>
-	$('#content-container').html(linkText);
-	</script>
-
 				
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
  Sign Up
@@ -319,6 +315,11 @@ Home services  on Demand
 					</div>
 				</div>	
 			</section>
+			
+<script>
+	document.getElementById("demo").innerHTML = "Paragraph changed!";
+	</script>
+
 			<!-- End discount-section Area -->
 <?php }?>
 			<!-- Start work-process Area -->
