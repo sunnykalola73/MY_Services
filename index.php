@@ -175,9 +175,9 @@ if(isset($_GET['msg']))
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
  Sign Up As Dealer
 </button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+							<a href="signup.php" ><button type="button" class="btn btn-primary">
  Sign Up
-</button>
+</button></a>
 
 
 <script>

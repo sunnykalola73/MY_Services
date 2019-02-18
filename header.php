@@ -81,8 +81,8 @@ alert("<?php echo $msg; ?>");
                                 <?php }else{ ?>
                       <li><a href="#"><b><?php echo $username; ?></b></a>
                           <ul>
-                              <li><a href="#">My Services</a></li>
-                              <li><a href="#">Account</a></li>
+                              <li><a href="appointment.php">My Services</a></li>
+                              <li><a href="account.php">Account</a></li>
                               <li><a href="./do_logout.php">Log Out</a></li>
                           </ul>
                                 </li>
