@@ -59,12 +59,10 @@ alert("<?php echo $msg; ?>");
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
-<<<<<<< HEAD
                       <li class="menu-active"><a href="index.php">Home</a></li>
-=======
 
                       <li class="active"><a href="index.php">Home</a></li>
->>>>>>> 976a7f1e56f7ab6c29eeb48381233de5bb9db3fb
+
                       <li><a href="about.html">About</a></li>
 
                       <li class="menu-active"><a href="index.php">Home</a></li>
