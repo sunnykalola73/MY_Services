@@ -51,7 +51,7 @@
                       <li><a  class="menu-has-children" href="services.php">Services</a>
 =======
 >>>>>>> 97d988fd7cc530ad44472be173652f4b39fdc0dc
-                      <li><a  class="menu-has-children" href="services.html">Services</a>
+                      <li><a  class="menu-has-children" href="services.php">Services</a>
 >>>>>>> 50a0a727cc539abe5cbd777f9d3627ee4eece8be
                        
                       </li>
