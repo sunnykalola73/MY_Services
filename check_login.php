@@ -1,3 +1,6 @@
+<script>
+    alert("gg");
+    </script>
 <?php
 
 if (!isset($_POST['username']))
@@ -12,7 +15,12 @@ else
              die("Query error");
        
              $row = $resultset->fetch_assoc();
-             
+           //  print("ff");
+          //   print($username);
+             if($row['block_status']==1)
+             {$msg="Sorry You are blocked by admin"; echo "hh";}
+             else
+             {
              if($username==$row['username'])
              {
                  if($pass==$row['password'])
@@ -29,6 +37,7 @@ else
             {
                 $msg="Wrong Username";
             }
+        }
             header("location: ./index.php");        
            
     }
