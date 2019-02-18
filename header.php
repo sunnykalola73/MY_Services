@@ -41,16 +41,10 @@
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                      <li class="menu-active"><a href="index.html">Home</a></li>
+                      <li class="menu-active"><a href="index.php">Home</a></li>
                       <li><a href="about.html">About</a></li>
                       <li><a  class="menu-has-children" href="services.html">Services</a>
-                        <ul>
-                            <li><h1><a href="cleaning_services.html">Home Cleaning</a></h1></li>
-                            <li><a href="cleaning_services.html">Interior & Exterior Designing</a></li>
-                            <li><a href="cleaning_services.html">Appliances Installation & Maintainance</a></li>
-                            <li><a href="cleaning_services.html">Shifting</a></li>
-                            <li><a href="cleaning_services.html">Plumbing</a></li>
-                        </ul>
+                       
                       </li>
                       <li><a href="feedback.html">Feedback</a></li>
                                 <li><a href="contact.html">Contact</a></li>
