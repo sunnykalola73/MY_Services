@@ -1,5 +1,6 @@
 
-	<?php include "header.php"; ?>
+<?php $page="services"; ?>
+<?php include "header.php"; ?>
 	
 
 <!-- start banner Area -->

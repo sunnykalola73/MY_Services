@@ -4,7 +4,7 @@ created by Sunny Kalola
 Home services  on Demand
 
 -->	
-
+<?php $page="home"; ?>
 
 <?php  include "header.php"; ?>
 
@@ -227,9 +227,9 @@ Home services  on Demand
 			
 		
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" id="modal_footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" onclick="enterotp()" class="btn btn-primary">Submit</button>
+        <button type="button" onclick="enterotp()" class="btn btn-primary">Submit1</button>
 			</div>
 </form>
     </div>
@@ -246,12 +246,17 @@ Home services  on Demand
 <script>
 	function enterotp()
 	{
-		alert("h");
-	document.getElementById("modal_body").innerHTML = '	<div class="form-group">
-    <label for="inputAddress2">Enter OTP</label>
-    <input type="text" class="form-control" id="otp" placeholder="OTP">
-  </div>';
 	
+	document.getElementById("modal_body").innerHTML = '<div class="form-group"><label for="inputAddress2">Enter OTP</label><input type="text" class="form-control" id="otp" placeholder="OTP"> </div>';	
+	document.getElementById("modal_footer").innerHTML = '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="button" onclick="verifyotp()" class="btn btn-primary">Submit1</button>';
+	}
+	function verifyotp()
+	{
+		var eotp=document.getElementById("modal_body").value;
+		if(eotp==otp)
+			alert("successfully created");
+		else
+			alert("wrong login");
 	}
 	</script>
 <!-- Modal -->
