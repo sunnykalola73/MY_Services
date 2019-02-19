@@ -37,13 +37,17 @@ alert("<?php echo $msg; ?>");
 						
 						}
 					*/
-						function block(id)
+						function block(id,num)
 						{
 							$.ajax({type:"POST",
 							url:"block.php",
-							data:{name:id},
+							data:{name:id,num:num},
 							success:function(msg)
-							{ alert("user bloked");
+							{
+								if(num==0)
+								 alert("user bloked");
+								 else if(num==1)
+								 alert("user unbloked");
 							}
 							});
 						}
@@ -72,10 +76,18 @@ alert("<?php echo $msg; ?>");
 			</thead>
 					<?php
 						include 'connect.php';
-					   $total="select * from user_detail";
+						 $total="select * from user_detail";
+						 
 					   $no=mysqli_query($database_handler,$total);
 					   while($row=mysqli_fetch_array($no))
 					   { 
+							$total1="select * from user where id = '".$row['uid']."'";
+							
+							$no1=mysqli_query($database_handler,$total1);
+							
+							$row1=mysqli_fetch_array($no1);
+							
+
 				?>
 			<tbody>
 			<tr>
@@ -83,10 +95,10 @@ alert("<?php echo $msg; ?>");
 			<?php echo $row['id']; ?>
 			</td>
 			<td>
-			<?php echo $row['username']; ?>
+			<?php echo $row['name']; ?>
 			</td>
 			<td>
-			<input type="submit" onclick="block(<?php echo $row['id']; ?>);" value="BLOCK" />
+			<input type="submit" onclick="block(<?php echo $row['uid'];?>,<?php echo $row1['block_status'];?>);" value="<?php if($row1['block_status']==1) echo "unblock"; else {echo "block";} ?>" />
 			</td>
 					   <?php
 						   } 
@@ -95,6 +107,15 @@ alert("<?php echo $msg; ?>");
 </table>
 
  						
+
+
+
+
+
+
+
+
+
 						</div>	
 					</div>
 				</div>

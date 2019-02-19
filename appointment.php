@@ -18,10 +18,20 @@ $mobile_no=$row['mobileno'];
      {
      $desc = $_POST['desc'];
      $date = $_POST['date'];
+     $sid = $_POST['sid'];
+     $uid=$_COOKIE["uid"];
      $address = $_POST['address'];
      if($address=="Same Address")
         $address=$row['block'].",".$row['area'].",".$row['city'].",".$row['state'].".";
-    
+        $sql = "INSERT INTO  appointment (`uid`, `sid`, `date`, `address`,`description`)  VALUES ('$uid', '$sid','$date','$address','$desc')";    
+        if ($database_handler->query($sql) === TRUE) {
+
+          ?> 
+          <script>
+          alert("appoinment booked");
+          </script>
+           <?php
+      }
     }
     if(!$resultset = $database_handler->query("SELECT * FROM appointment where uid =".$uid." ORDER BY date DESC ;"))
     die("Query error");

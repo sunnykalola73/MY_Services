@@ -15,6 +15,7 @@ else
 <div class="request">
 	
       <form action="appointment.php" method="POST">
+	  <input type="hidden" name="sid" value="<?php echo $_POST['sid']; ?>" />
 		  <input type="hidden" value="1" name="new_apt"/>
 				<div class="form-group col-lg-5 col-ms-5">
 					<label>Description</label><br>
