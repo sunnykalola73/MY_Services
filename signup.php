@@ -1,11 +1,13 @@
-<?php include "header.php";?>
+<?php include "header.php";
+
+?>
 <!-- start banner Area -->
 			<section class="banner-area" id="home">
 				<div class="container">
 					<div class="row fullscreen d-flex align-items-center">
 
 						<div class="banner-content col-lg-6 col-md-1 justify-content-center">
-                            <form action="check_signup.php" method="POST">
+                            <form action="do_signup.php" method="POST">
                                 <div>
                                     <caption><h1>Register Here</h1></caption>
                                 </div>
