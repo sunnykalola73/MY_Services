@@ -3,10 +3,10 @@
 ?>
 <!-- start banner Area -->
 			<section class="banner-area" id="home">
-				<div class="container">
-					<div class="row fullscreen d-flex align-items-center">
+				<div class="container" >
+					<div class="row  d-flex align-items-center">
 
-						<div class="banner-content col-lg-6 col-md-1 justify-content-center">
+						<div class="banner-content col-lg-6 col-md-5 justify-content-center" media="all">
                             <form action="do_signup.php" method="POST">
                                 <div>
                                     <caption><h1>Register Here</h1></caption>
@@ -16,21 +16,21 @@
                                     <input name="name" type="text" class="form-control" id="name" placeholder="Enter Full Name" required>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-* ">
                                         <label for="inputEmail4">Email</label>
                                         <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
                                     </div>
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-* ">
                                         <label for="inputPassword4">Choose Password</label>
                                         <input name="pass" type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-* col-sm-*">
                                         <label for="inputEmail4">Username</label>
                                         <input name="username" type="text" class="form-control" id="inputEmail4" placeholder="Username" required>
                                     </div>
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-* ">
                                         <label for="inputPassword4">Mobile No.(+91)</label>
                                         <input name="mobileno" type="number" class="form-control" id="inputPassword4" placeholder="Mobile No." maxlength="10" required>
                                     </div>
@@ -44,11 +44,11 @@
                                     <input type="text" name="area" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-* col-sm">
                                         <label for="inputCity">City</label>
                                         <input type="text" name="city" class="form-control" id="inputCity" placeholder="City" required>
                                     </div>
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-* col-sm">
                                         <label for="inputCity">City</label>
                                         <input type="text" name="state" class="form-control" id="inputCity" placeholder="state" required>
                                     </div>
