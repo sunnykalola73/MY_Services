@@ -1569,22 +1569,25 @@ body.mobile-nav-active #mobile-nav-toggle {
     bottom: 0}
 .banner-area {
     background: url(../img/banner-bg.jpg) center;
+	 text-align: center; 
     background-size: cover}
 @media (max-width: 767px) {
     .banner-area .fullscreen {
-    height: 100% !important}
+    height: 100% !important
+	}
 }
 .banner-area .primary-btn {
     padding-left: 30px;
     padding-right: 30px}
 .banner-content {
-    text-align: left}
+    text-align: left;}
 .banner-content h1 {
     color: #fff;
     font-size: 48px;
     font-weight: 700;
     line-height: 1em;
     margin-top: 20px;
+	 align-items: center;
     margin-bottom: 20px}
 @media (max-width: 991px) {
     .banner-content h1 {
@@ -2812,6 +2815,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-radius: 0px;
     width: 100%;
     font-size: 13px;
+
     color: #777777}
 .comment-form .form-control:focus {
     box-shadow: none}

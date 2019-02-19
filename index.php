@@ -171,11 +171,7 @@ if(isset($_GET['msg']))
 								Register Here
 							</p>
 							<div>
-						
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
- Sign Up As Dealer
-</button>
-							<a href="signup.php" ><button type="button" class="btn btn-primary">
+				<a href="signup.php" ><button type="button" class="btn btn-primary">
  Sign Up
 </button></a>
 

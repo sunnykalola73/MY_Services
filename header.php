@@ -47,7 +47,6 @@ alert("<?php echo $msg; ?>");
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/owl.carousel.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/service.css">
     </head>
     <body>	
 
@@ -68,28 +67,30 @@ alert("<?php echo $msg; ?>");
                      
                       
 
-                      <li <?php if(isset($page) && $page=="services") echo 'class="active"'; ?>><a  class="menu-has-children" href="services1.php">Services</a>
+                      <li <?php if(isset($page) && $page=="services") echo 'class="active"'; ?>><a  href="services1.php">Services</a>
 
 
                        
                       </li>
                       <li <?php if(isset($page) && $page=="contact") echo 'class="active"'; ?>><a href="contact.php">Contact</a></li>
-                     <!-- <li <?php //if(isset($page) && $page=="feedback") echo 'class="active"'; ?>><a href="feedback.php">Feedback</a></li> -->
+                      <li <?php if(isset($page) && $page=="feedback") echo 'class="active"'; ?>><a href="feedback.php">Feedback</a></li>
                                
                                 <?php if($set_uname==0){ ?>
                                   
                       <li><a href="index.php#login">LogIn</a><li>
                                 <?php }else{ ?>
-                      <li><a href="#"><b><?php echo $username; ?></b></a>
-                          <ul>
-                              <li><a href="appointment.php">My Services</a></li>
-                              <li><a href="account.php">Account</a></li>
-                              <?php  if($_COOKIE['type']=="admin") { ?>
-                              <li><a href="manageusers.php">Manage</a></li>
-                              <?php } ?>
-                              <li><a href="./do_logout.php">Log Out</a></li>
-                          </ul>
-                                </li>
+                      
+								
+								<li class="menu-has-children"><a href="#"><b><?php echo $username; ?></b></a>
+				            <ul>
+				              <li><a href="appointment.php">My Services</a></li>
+				              <li><a href="account.php">Account</a></li>
+							  <li><a href="./do_logout.php">Log Out</a></li>
+				            </ul>
+				          </li>		
+								
+								
+								
                                 <?php } ?>
                     </ul>
                   </nav><!-- #nav-menu-container -->		    		
