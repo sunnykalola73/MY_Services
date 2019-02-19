@@ -171,9 +171,13 @@ if(isset($_GET['msg']))
 								Register Here
 							</p>
 							<div>
+<<<<<<< HEAD
 						
 
 							<a href="signup.php" ><button type="button" class="btn btn-primary">
+=======
+				<a href="signup.php" ><button type="button" class="btn btn-primary">
+>>>>>>> d6624e7b5d84d305c97c3bb8e05a53552a3fac61
  Sign Up
 </button></a>
 
