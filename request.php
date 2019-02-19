@@ -43,6 +43,9 @@ else
 					<input type="radio" name="address" value="Same Address" checked>Same Address<br>
 					<input type="radio" name="address" value="Add New Address" >Add New Address<br>
 				</div>
+				<label>Pay Token Amount of 100 Rs. </label>
+				<div class='pm-button'><a href='https://www.payumoney.com/paybypayumoney/#/92832A7082DF5A67C0559DB92422EDF3'><img src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png' /></a></div> 
+				
 				<div>	
 					<input type="submit" class="btn btn-primary" name="submit" value="Request"/>
 				</div>

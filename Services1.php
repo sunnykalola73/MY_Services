@@ -33,7 +33,6 @@ if(!$resultset = $database_handler->query("SELECT * FROM service ;"))
 	<col width="500">
 	<col width="100">
 	<?php while($row = $resultset->fetch_assoc()) { ?>
-<<<<<<< HEAD
 
 			
 	
@@ -44,10 +43,9 @@ if(!$resultset = $database_handler->query("SELECT * FROM service ;"))
 	<input type="hidden" name="sid" value="<?php echo $row['sid']; ?>" />
 			<td><img class="xyz"  style="margin-left:0"  src="<?php echo $row['image']; ?>" alt=""></td>
 <div>
-=======
 	<tr><form action="request.php">
 			<td><img class="xyz"  height="50%" style="margin-left:0"  src="<?php echo $row['image']; ?>" alt=""></td>
->>>>>>> d6624e7b5d84d305c97c3bb8e05a53552a3fac61
+
 			<td>
 				<h3 align="center"> <?php echo $row['sname']; ?> </h3><br><p class="abc"> <?php echo $row['description']; ?> </p></td>
 			<td><input type="submit" value="Request"></td>
