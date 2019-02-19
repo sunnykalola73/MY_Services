@@ -18,12 +18,17 @@ $mobile_no=$row['mobileno'];
      {
      $desc = $_POST['desc'];
      $date = $_POST['date'];
+     $fromtime = $_POST['timefrom'];
+     $totime = $_POST['timeto'];
      $sid = $_POST['sid'];
+     $sname = $_POST['sidaa'];
+     $suid = $_POST['suid'];
+     
      $uid=$_COOKIE["uid"];
      $address = $_POST['address'];
      if($address=="Same Address")
         $address=$row['block'].",".$row['area'].",".$row['city'].",".$row['state'].".";
-        $sql = "INSERT INTO  appointment (`uid`, `sid`, `date`, `address`,`description`)  VALUES ('$uid', '$sid','$date','$address','$desc')";    
+        $sql = "INSERT INTO  appointment (`uid`, `sid`, `date`, `address`,`description`,`timefrom`,`timeto`)  VALUES ('$uid', '$sid','$date','$address','$desc','$fromtime','$totime')";    
         if ($database_handler->query($sql) === TRUE) {
 
           ?> 
@@ -33,9 +38,21 @@ $mobile_no=$row['mobileno'];
            <?php
       }
     }
-    if(!$resultset = $database_handler->query("SELECT * FROM appointment where uid =".$uid." ORDER BY date DESC ;"))
+    if($_COOKIE['type']=="customer")
+    {if(!$resultset = $database_handler->query("SELECT * FROM appointment where uid =".$uid." ORDER BY date DESC ;"))
     die("Query error");
-    ?><div class = "col-md-10 offset-md-1">
+    }
+    else if($_COOKIE['type']=="admin")
+    {if(!$resultset = $database_handler->query("SELECT * FROM appointment  ORDER BY date DESC ;"))
+      die("Query error");}
+    else 
+      {
+        header('location: servicep.php');
+      
+      }
+      
+
+    ?><div class = "col-md-11 offset-md-1">
     <div id="accordion"><?php
     $i=0;
    while( $row = $resultset->fetch_assoc())
@@ -50,7 +67,8 @@ $mobile_no=$row['mobileno'];
     <div class="card-header" id="<?php echo 'heading'.$i.''; ?>">
       <h5 class="mb-0">
         <button class="btn btn-link">
-          <span><?php echo $row1['sname']; ?></span>  <span style="padding:50%;"><b><u>Date:</b> <?php echo $row['date']; ?> </u></span>
+          <span><?php echo $row1['sname']; ?></span>  <span style="padding:20%;"><b><u>Date:</b> <?php echo $row['date']; ?> </u></span>
+          <span style="padding:20%;"><b><u>Time:</b> <?php echo $row['timefrom']; echo " to "; echo $row['timeto']; ?> </u></span>
         </button>
 
       </h5>

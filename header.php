@@ -19,6 +19,7 @@ alert("<?php echo $msg; ?>");
 <!DOCTYPE html>
 <html class="no-js">
 <head>
+<link rel="manifest" href="/MY_Services/manifest.json">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +35,23 @@ alert("<?php echo $msg; ?>");
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>Home Services</title>
+<script>
+//This is the "Offline page" service worker
 
+//Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+if (navigator.serviceWorker.controller) {
+  console.log('[PWA Builder] active service worker found, no need to register')
+} else {
+  //Register the ServiceWorker
+  navigator.serviceWorker.register('pwabuider-sw.js', {
+    scope: './'
+  }).then(function(reg) {
+    console.log('Service worker has been registered for scope:'+ reg.scope);
+  });
+}
+
+
+</script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
         <!--
         CSS
@@ -68,7 +85,7 @@ alert("<?php echo $msg; ?>");
                      
                       
 
-                      <li <?php if(isset($page) && $page=="services") echo 'class="active"'; ?>><a  class="menu-has-children" href="services1.php">Services</a>
+                      <li <?php if(isset($page) && $page=="services") echo 'class="active"'; ?>><a  href="services1.php">Services</a>
 
 
                        
@@ -80,7 +97,7 @@ alert("<?php echo $msg; ?>");
                                   
                       <li><a href="index.php#login">LogIn</a><li>
                                 <?php }else{ ?>
-                      <li><a href="#"><b><?php echo $username; ?></b></a>
+                      <li class="menu-has-children"><a href="#"><b><?php echo $username; ?></b></a>
                           <ul>
                               <li><a href="appointment.php">My Services</a></li>
                               <li><a href="account.php">Account</a></li>

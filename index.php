@@ -172,9 +172,7 @@ if(isset($_GET['msg']))
 							</p>
 							<div>
 						
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
- Sign Up As Dealer
-</button>
+
 							<a href="signup.php" ><button type="button" class="btn btn-primary">
  Sign Up
 </button></a>
@@ -405,5 +403,17 @@ if(isset($_GET['msg']))
 					
 				</div>	
 			</section>
+			<script>
+        if (navigator.serviceWorker.controller) {
+            console.log('[PWA Builder] active service worker found, no need to register')
+        } else {
+           //Register the ServiceWorker
+            navigator.serviceWorker.register('pwabuilder-sw.js', {
+            scope: './'
+            }).then(function(reg) {
+                console.log('Service worker has been registered for scope:'+ reg.scope);
+            });
+        }
+    </script>
 			<!-- End faq Area -->		
 <?php include "footer.php";  ?>
