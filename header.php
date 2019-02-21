@@ -90,13 +90,13 @@ if (navigator.serviceWorker.controller) {
                        
                       </li>
                       <li <?php if(isset($page) && $page=="contact") echo 'class="active"'; ?>><a href="contact.php">Contact</a></li>
-                      <li <?php if(isset($page) && $page=="feedback") echo 'class="active"'; ?>><a href="feedback.php">Feedback</a></li>
+                      
                                
                                 <?php if($set_uname==0){ ?>
                                   
                       <li><a href="index.php#login">LogIn</a><li>
                                 <?php }else{ ?>
-<<<<<<< HEAD
+
                       <li class="menu-has-children"><a href="#"><b><?php echo $username; ?></b></a>
                           <ul>
                               <li><a href="appointment.php">My Services</a></li>
@@ -104,23 +104,19 @@ if (navigator.serviceWorker.controller) {
                               <?php  if($_COOKIE['type']=="admin") { ?>
                               <li><a href="manageusers.php">Manage</a></li>
                               <?php } ?>
+                              <?php  if($_COOKIE['type']=="service_provider") { ?>
+                              <li><a href="ServiceInsertion.php">Add Services</a></li>
+                              <?php } ?>
+                              
                               <li><a href="./do_logout.php">Log Out</a></li>
                           </ul>
                                 </li>
-=======
-                      
-								
-								<li class="menu-has-children"><a href="#"><b><?php echo $username; ?></b></a>
-				            <ul>
-				              <li><a href="appointment.php">My Services</a></li>
-				              <li><a href="account.php">Account</a></li>
-							  <li><a href="./do_logout.php">Log Out</a></li>
-				            </ul>
-				          </li>		
+
+              	
 								
 								
 								
->>>>>>> d6624e7b5d84d305c97c3bb8e05a53552a3fac61
+
                                 <?php } ?>
                     </ul>
                   </nav><!-- #nav-menu-container -->		    		

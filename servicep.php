@@ -11,7 +11,7 @@ if(!$resultset = $database_handler->query("SELECT * FROM appointment  ;"))
         if(!$resultset1 = $database_handler->query("SELECT * FROM service where sid='$tsid';"))
         die("Query error");
         $row1 = $resultset1->fetch_assoc();
-        if($row1['uid']==$_COOKIE['uid']);
+        if($row1['uid']==$_COOKIE['uid']){
         $i=$i+1;        
 ?>
 <div class = "col-md-11 offset-md-1">
@@ -30,20 +30,23 @@ if(!$resultset = $database_handler->query("SELECT * FROM appointment  ;"))
     </div>
     
  
-    <div id="<?php echo 'collapse'.$i.''; ?>">
+
       <div class="card-body" style="text-align:justify">
+      <form action="submitsp.php" method="POST">
+        <input type="hidden" value="<?php echo $row['aid']; ?>" name="aid" />
         <b><u>Description:</u></b><?php echo $row['description']; ?>
-        <p><br><span id="<?php echo 'status'.$row['aid'];?>"><b><u>status:-</b></u> <?php echo $row['status']; ?> </span><span style="padding:10%"><b><u>Address:-</b></u><?php echo $row['Address']; ?></span>
-        <span style="padding:10%"><b><u>Feedback:-</b></u><?php echo $row['aprooval']; ?></span></p> 
+        <p><br><span id="<?php echo 'status'.$row['aid'];?>"><b><u>status:-</b></u> <?php echo $row['status']; ?> </span><span style="padding:3%"><b><u>Address:-</b></u><?php echo $row['Address']; ?></span>
+        <span style="padding:3%"><b><u>Feedback:-    </b></u><input type="text" name="aprooval" style="width:30%;" value="<?php echo $row['aprooval']; ?>" /></span></p> 
         <?php if($row['status']!="Completed") { ?>
-                  <button type="button" onclick="edit_apt();" class="btn btn-secondary">&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</button> 
-       <span style="padding:20%"><button  type="button" onclick="cancel_apt(<?php echo $row['aid']; ?>);" class="btn btn-secondary">Cancel Appointment</button></span>
-        <span style="padding:10%"><button type="button" onclick="complete_apt(<?php echo $row['aid']; ?>);" class="btn btn-secondary">Mark as Completed</button></span>
+                  <input type="submit"  class="btn btn-secondary" value="submit" />
+                 
         <?php } ?>
+        </form>
     </div>
-    </div>
+    
   </div><br><br>
    
 </div>
 </div>
-        <?php } ?>
+        <?php } 
+        }?>

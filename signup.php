@@ -7,7 +7,7 @@
 					<div class="row  d-flex align-items-center">
 
 						<div class="banner-content col-lg-6 col-md-5 justify-content-center" media="all">
-                            <form action="do_signup.php" method="POST">
+                            <form action="check_signup.php" method="POST">
                                 <div>
                                     <caption><h1>Register Here</h1></caption>
                                 </div>

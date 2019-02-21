@@ -14,7 +14,10 @@ $state=$_POST['state'];
 $sql = "INSERT INTO user  ( username, password)
 VALUES ('$user', '$pass')";    
 
-             
+             if($_POST['otp']!=$_POST['ootp']){
+            ?> <script>alert("Wrong OTP");</script> <?php
+            header('location: signup.php');
+            }
 if ($database_handler->query($sql) === TRUE) {
     $ques_id=mysqli_insert_id($database_handler);
     $sql = "INSERT INTO user_detail  ( uid, email,name,block,area,city,state,mobileno)

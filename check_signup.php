@@ -10,41 +10,48 @@ $area=$_POST['area'];
 $city=$_POST['city'];
 $state=$_POST['state'];
 
-header('location: https://smsapi.engineeringtgr.com/send/?Mobile=9898448254&Password=H3849A&Message="Easy Service OTP is"'.$otp.' "&To='.$num.'&Key=romitkFhIPjeJUvD3NwVm42dL');
-
 $message="Easy Service OTP is".$otp.".";
-file_get_contents('https://smsapi.engineeringtgr.com/send/?Mobile=9898448254&Password=H3849A&Message="Easy Service OTP is"'.$otp.' "&To='.$num.'&Key=romitkFhIPjeJUvD3NwVm42dL');
 
+
+
+
+$json = json_decode(file_get_contents("https://smsapi.engineeringtgr.com/send/?Mobile=7567704505&Password=H7257Q&Message=".$message."&To=".urlencode($num)."&Key=koladcDQfRuobULmk07sECNwelTF8") ,true);
+if ($json["status"]==="success") {
+    echo $json["msg"];
+    //your code when send success
+}else{
+    echo $json["msg"];
+    //your code when not send
+}
 
 
 
 ?>
-<script>
-$.ajax({type:"POST",
-    url:"send_sms.php",
-    data:{name:<?php echo $otp; ?>,num:<?php echo $num; ?>},
-    success:function(msg)
-    { 
-        
-       alert("enter otp");
-       
-    }
-    });
-
- </script>
 <!-- start banner Area -->
 			<section class="banner-area" id="home">
 				<div class="container">
 					<div class="row fullscreen d-flex align-items-center">
 
 						<div class="banner-content col-lg-6 col-md-1 justify-content-center">
-                            <form>
+                            <form action="do_signup.php" method="POST" >
+                            
+
+<input type="hidden" value="<?php echo $name; ?>" name="name" />
+<input type="hidden" value="<?php echo $email; ?>" name="email" />
+<input type="hidden" value="<?php echo $pass; ?>" name="pass" />
+<input type="hidden" value="<?php echo $user; ?>" name="user" />
+<input type="hidden" value="<?php echo $num; ?>" name="num" />
+<input type="hidden" value="<?php echo $block; ?>" name="block" />
+<input type="hidden" value="<?php echo $area; ?>" name="area" />
+<input type="hidden" value="<?php echo $city; ?>" name="city" /> 
+<input type="hidden" value="<?php echo $state; ?>" name="state" />
+                            <input type="hidden" name="otp" value="<?php echo $otp; ?>" />
                                 <div>
                                     <caption><h1>Enter OTP</h1></caption>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress">OTP</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter Full Name">
+                                    <input type="text" class="form-control" name="ootp" id="name" placeholder="Enter OTP">
                                 </div>
                                 
                                 <div>

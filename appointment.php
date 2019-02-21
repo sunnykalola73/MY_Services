@@ -67,8 +67,10 @@ $mobile_no=$row['mobileno'];
     <div class="card-header" id="<?php echo 'heading'.$i.''; ?>">
       <h5 class="mb-0">
         <button class="btn btn-link">
-          <span><?php echo $row1['sname']; ?></span>  <span style="padding:20%;"><b><u>Date:</b> <?php echo $row['date']; ?> </u></span>
-          <span style="padding:20%;"><b><u>Time:</b> <?php echo $row['timefrom']; echo " to "; echo $row['timeto']; ?> </u></span>
+          <form action="apt_update.php" method="POST">
+            <input type="hidden" name="aid" value="<?php echo $row['aid']; ?> " />
+          <span><?php echo $row1['sname']; ?><b><u>Date: </u>&nbsp;&nbsp;&nbsp;&nbsp; </b><input type="date" name="rdate" value="<?php echo $row['date']; ?>" /></span>
+     <b><u>Time:</b></u>&nbsp;&nbsp;&nbsp;&nbsp; <input name="timefrom" type="text" value="<?php echo $row['timefrom'];?>" />to <input name="timeto" value="<?php echo $row['timeto']; ?>" /> </span>
         </button>
 
       </h5>
@@ -78,12 +80,29 @@ $mobile_no=$row['mobileno'];
     <div id="<?php echo 'collapse'.$i.''; ?>">
       <div class="card-body" style="text-align:justify">
         <b><u>Description:</u></b><?php echo $row1['description']; ?>
-        <p><br><span id="<?php echo 'status'.$row['aid'];?>"><b><u>status:-</b></u> <?php echo $row['status']; ?> </span><span style="padding:10%"><b><u>Address:-</b></u><?php echo $row['Address']; ?></span></p> 
+        <p><br><span id="<?php echo 'status'.$row['aid'];?>"><b><u>status:-</b></u> <?php echo $row['status']; ?> </span><span style="padding:3%"><b><u>Address:-</b></u><?php echo $row['Address']; ?></span></span><span style="padding:5%"><b><u>Feedback:-  </b></u><input type="text" style="width:30%;" value="<?php echo $row['aprooval'];?>" readonly /></span></p> 
         <?php if($row['status']!="Completed") { ?>
-                  <button type="button" onclick="edit_apt();" class="btn btn-secondary">&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</button> 
-       <span style="padding:20%"><button  type="button" onclick="cancel_apt(<?php echo $row['aid']; ?>);" class="btn btn-secondary">Cancel Appointment</button></span>
-        <span style="padding:10%"><button type="button" onclick="complete_apt(<?php echo $row['aid']; ?>);" class="btn btn-secondary">Mark as Completed</button></span>
-        <?php } ?>
+          <div class="row" > 
+                  <input type="submit" class="btn btn-secondary" value="Reschedule" />
+        </form> 
+              <?php 
+              $diff_time = $row['date'];
+              $diff_arr  = explode("-", $diff_time);
+              $curr_timr = date("Y-m-d");
+              $curr_arr = explode("-",$curr_timr);
+              
+              
+              if($diff_arr==$curr_arr || $diff_arr >= $curr_arr) {
+
+if(time()> strtotime($row['timefrom']) - strtotime('0:30')){?>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button  type="button" onclick="cancel_apt(<?php echo $row['aid']; ?>);" class="btn btn-secondary">Cancel Appointment</button>
+           <?php     }} ?>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="complete_apt(<?php echo $row['aid']; ?>);" class="btn btn-secondary">Mark as Completed</button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <?php if($_COOKIE['type']=="customer"){
+                   ?><div class='pm-button'><a href='https://www.payumoney.com/paybypayumoney/#/92832A7082DF5A67C0559DB92422EDF3'><img src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png' /></a></div> 
+                  <?php } ?> 
+</div> <?php } ?>
     </div>
     </div>
   </div><br><br>

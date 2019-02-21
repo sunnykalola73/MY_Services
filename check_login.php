@@ -13,9 +13,8 @@ else
        
              $row = $resultset->fetch_assoc();
           
-             if($row['block_status']==1)
-             {$msg="Sorry You are blocked by admin"; }
-             else
+            
+             
              {
              if($username==$row['username'])
              {

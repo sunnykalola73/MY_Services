@@ -98,6 +98,7 @@ alert("<?php echo $msg; ?>");
 			<?php echo $row['name']; ?>
 			</td>
 			<td>
+				
 			<input type="submit" onclick="block(<?php echo $row['uid'];?>,<?php echo $row1['block_status'];?>);" value="<?php if($row1['block_status']==1) echo "unblock"; else {echo "block";} ?>" />
 			</td>
 					   <?php
