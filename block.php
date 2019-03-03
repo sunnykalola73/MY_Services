@@ -24,6 +24,7 @@ mysqli_query($database_handler,$total);
 // }else{
 //     echo $json["msg"];
 //     //your code wnhen not send
+//hit
 // }
 
 
